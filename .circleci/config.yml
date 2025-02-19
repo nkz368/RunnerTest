@@ -5,9 +5,14 @@ jobs:
       - image: cimg/base:current
     resource_class: yyitjjdmvmtqd9tqhtfbvt/runnnertest
     steps:
-      - run: echo "Hi I'm on a Container Runner!"
-      - run: curl -O https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz
-      - run: ls -l
+      - run:
+          name: weblogic install
+          command: |
+            curl -O https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz
+            ls -l
+            tar -zxvf jdk-21_linux-x64_bin.tar.gz
+            JAVA_HOME=`pwd`
+            echo $JAVA_HOME
 workflows:
   build-workflow:
     jobs:
