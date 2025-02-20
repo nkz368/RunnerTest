@@ -9,8 +9,8 @@ jobs:
           name: weblogic install
           command: |
             ls -l /home/Oracle/products/Oracle_Home/wlserver/common/bin/wlst.sh
-            curl -v http://150.230.196.180:7001/console
-            echo "connect('comuser', 'comuser123', 't3://150.230.196.180:7001')" >wlst.py
+            curl -v http://10.96.51.104:7001/console
+            echo "connect('comuser', 'comuser123', 't3://10.96.51.104:7001')" >wlst.py
             /home/Oracle/products/Oracle_Home/wlserver/common/bin/wlst.sh ./wlst.py
 workflows:
   build-workflow:
