@@ -10,7 +10,7 @@ jobs:
           command: |
             ls -l /home/Oracle/products/Oracle_Home/wlserver/common/bin/wlst.sh
             curl -v http://10.96.51.104:7001/console
-            echo "connect('comuser', 'comuser123', 't3://10.96.51.104:7001')" >wlst.py
+            echo "connect('weblogic', 'wls12345', 't3://10.0.10.122:7001')" >wlst.py
             /home/Oracle/products/Oracle_Home/wlserver/common/bin/wlst.sh ./wlst.py
 workflows:
   build-workflow:
