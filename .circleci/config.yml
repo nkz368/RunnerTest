@@ -30,7 +30,7 @@ jobs:
           name: weblogic deploy
           command: |
             ls -lR /tmp/pomtest
-            echo "connect('weblogic', 'wls12345', 't3://10.0.10.122:7001')" >wlst.py
+            echo "connect('weblogic', 'wls12345', 't3://155.248.161.146:7001')" >wlst.py
             /home/Oracle/products/Oracle_Home/wlserver/common/bin/wlst.sh ./wlst.py
 workflows:
   build-workflow:
