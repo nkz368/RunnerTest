@@ -43,7 +43,8 @@ jobs:
             wget --user=comuser --password=comuser123 \
                 http://158.101.129.240:8081/repository/com-release/com/nkzcloud/pomtest/0.0.1/pomtest-0.0.1.war \
                 -O pomtest.war
-            ls -l /tmp/pomtest
+            pwd
+            ls -l `pwd`/pomtest
             /home/Oracle/products/Oracle_Home/wlserver/common/bin/wlst.sh /tmp/pomtest/wlst/deploy.py
 workflows:
   build-workflow:
