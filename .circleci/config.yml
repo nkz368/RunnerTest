@@ -15,13 +15,15 @@ jobs:
             mvn clean package
             mvn deploy:deploy-file \
                 -Durl=http://158.101.129.240:8081/repository/com-release/ \
+                -DrepositoryId=nexus \
                 -DgroupId=com.nkzcloud \
                 -DartifactId=pomtest \
                 -Dversion=0.0.1 \
                 -Dpackaging=war \
                 -Dfile=/tmp/pomtest/target/pomtest.war
                 -Dusername=comuser \
-                -Dpassword=comusr123
+                -Dpassword=comusr123 \
+                -gs /tmp/pomtest/m2/settings.xml
       - persist_to_workspace:
           root: pomtest
           paths:
