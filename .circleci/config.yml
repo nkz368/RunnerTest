@@ -9,11 +9,16 @@ jobs:
       - run:
           name: build
           command: |
-            pwd
             git clone https://github.com/nkz368/pomtest.git
-            ls -l 
             cd pomtest
             mvn clean package
+            mvn deploy:deploy-file \
+                -Durl=http://158.101.129.240:8081/repository/com-release/ \
+                -DgroupId=com.nkzcloud \
+                -DartifactId=pomtest \
+                -Dversion=0.0.1 \
+                -Dpackaging=war \
+                -Dfile=/tmp/pomtest/target/pomtest.war
       - persist_to_workspace:
           root: pomtest
           paths:
