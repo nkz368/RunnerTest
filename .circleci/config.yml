@@ -14,6 +14,7 @@ jobs:
             cd pomtest
             mvn clean package
             mvn deploy:deploy-file \
+                -X \
                 -Durl=http://158.101.129.240:8081/repository/com-release/ \
                 -DrepositoryId=nexus \
                 -DgroupId=com.nkzcloud \
