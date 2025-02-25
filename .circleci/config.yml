@@ -31,6 +31,7 @@ jobs:
           name: weblogic deploy
           command: |
             ls -lR /tmp/pomtest
+            ls -l /tmp/pomtest/target/pomtest.war
             /home/Oracle/products/Oracle_Home/wlserver/common/bin/wlst.sh /tmp/pomtest/wlst/deploy.py
 workflows:
   build-workflow:
