@@ -14,8 +14,10 @@ jobs:
             ls -l 
             cd pomtest
             mvn clean package
-      #- persist_to_workspace:
-      #    root: pomtest
+      - persist_to_workspace:
+          root: pomtest
+          paths:
+            - target
   deploy:
     docker:
       - image: nrt.ocir.io/nrineztpwjh7/test-wls:fmw_14.1.1.0.0
