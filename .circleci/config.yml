@@ -9,6 +9,7 @@ jobs:
       - run:
           name: build
           command: |
+            ls -la
             git clone https://github.com/nkz368/pomtest.git
             cd pomtest
             mvn clean package
