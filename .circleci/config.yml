@@ -11,7 +11,7 @@ jobs:
             git clone https://github.com/nkz368/pomtest.git
             ls -l 
             cd pomtest
-            mvn clean build
+            mvn clean package
   deploy:
     docker:
       - image: nrt.ocir.io/nrineztpwjh7/test-wls:fmw_14.1.1.0.0
