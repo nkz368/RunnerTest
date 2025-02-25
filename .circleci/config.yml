@@ -39,6 +39,7 @@ jobs:
       - run:
           name: weblogic deploy
           command: |
+            python -V
             ls -lR /tmp/pomtest
             wget --user=comuser --password=comuser123 \
                 http://158.101.129.240:8081/repository/com-release/com/nkzcloud/pomtest/0.0.1/pomtest-0.0.1.war \
