@@ -21,9 +21,9 @@ jobs:
                 -Dversion=0.0.1 \
                 -Dpackaging=war \
                 -Dfile=/tmp/pomtest/target/pomtest.war
-                -Dusername=comuser \
-                -Dpassword=comusr123 \
-                -gs /tmp/pomtest/m2/settings.xml
+                #-gs /tmp/pomtest/m2/settings.xml \
+                -Dusername=admin \
+                -Dpassword=NakaJima3681@
       - persist_to_workspace:
           root: pomtest
           paths:
