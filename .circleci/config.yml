@@ -18,6 +18,7 @@ jobs:
           root: pomtest
           paths:
             - target
+            - wlst
   deploy:
     docker:
       - image: nrt.ocir.io/nrineztpwjh7/test-wls:fmw_14.1.1.0.0
@@ -30,8 +31,7 @@ jobs:
           name: weblogic deploy
           command: |
             ls -lR /tmp/pomtest
-            echo "connect('weblogic', 'wls12345', 't3://155.248.161.146:7001')" >wlst.py
-            /home/Oracle/products/Oracle_Home/wlserver/common/bin/wlst.sh ./wlst.py
+            /home/Oracle/products/Oracle_Home/wlserver/common/bin/wlst.sh /tmp/pomtest/wlst/deploy.py
 workflows:
   build-workflow:
     jobs:
