@@ -19,6 +19,8 @@ jobs:
                 -Dversion=0.0.1 \
                 -Dpackaging=war \
                 -Dfile=/tmp/pomtest/target/pomtest.war
+                -Dusername=comuser \
+                -Dpassword=comusr123
       - persist_to_workspace:
           root: pomtest
           paths:
