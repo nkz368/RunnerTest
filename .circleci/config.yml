@@ -21,7 +21,7 @@ jobs:
                 -DartifactId=pomtest \
                 -Dversion=0.0.1 \
                 -Dpackaging=war \
-                -Dfile=/tmp/pomtest/target/pomtest.war
+                -Dfile=/tmp/pomtest/target/pomtest.war \
                 #-gs /tmp/pomtest/m2/settings.xml \
                 -Dusername=admin \
                 -Dpassword=NakaJima3681@
