@@ -21,7 +21,7 @@ jobs:
   deploy:
     docker:
       - image: nrt.ocir.io/nrineztpwjh7/test-wls:fmw_14.1.1.0.0
-    #working_directory: /tmp
+    working_directory: /tmp
     resource_class: yyitjjdmvmtqd9tqhtfbvt/runnnertest
     steps:
       - attach_workspace:
@@ -36,3 +36,4 @@ workflows:
   build-workflow:
     jobs:
       - build
+      - deploy
